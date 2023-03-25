@@ -12,7 +12,7 @@ abstract class Veiculo(open var identificador: String) : Movimentavel{
     abstract fun requerCarta():Boolean
 
     override fun toString(): String {
-        return "$identificador | ${SimpleDateFormat("dd-MM-yyyy").format(dataDeAquisicao)} | Posicao | x:${posicao.x} | y:${posicao.y}"
+        return "    ${this.javaClass.simpleName} | $identificador | ${SimpleDateFormat("dd-MM-yyyy").format(dataDeAquisicao)} | Posicao | x:${posicao.x} | y:${posicao.y}"
     }
 
 
