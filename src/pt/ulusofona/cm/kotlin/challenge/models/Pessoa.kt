@@ -36,7 +36,7 @@ import java.util.*
          val veiculo = pesquisarVeiculo(identificador)
 
          require(!veiculo.requerCarta() || temCarta()) {
-             "$nome não tem carta para conduzir o veículo indicado"
+             "${this.nome} não tem carta para conduzir o veículo indicado"
          }
 
          veiculo.moverPara(x, y)
