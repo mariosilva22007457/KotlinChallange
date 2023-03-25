@@ -5,7 +5,7 @@ import pt.ulusofona.cm.kotlin.challenge.interfaces.Ligavel
 
  class Motor(var cavalos: Int, var cilindrada: Int) : Ligavel {
     var on: Boolean = false
-     var off : Boolean = false
+
 
 
 
@@ -15,17 +15,17 @@ import pt.ulusofona.cm.kotlin.challenge.interfaces.Ligavel
         }
 
         on = true
-        off = false
+
 
     }
 
 
      override fun desligar() {
-         if(off){
+         if(!on){
              throw VeiculoDesligadoException("O veiculo já encontra desligado")
          }
-         off = true
-         on = true
+
+         on = false
      }
 
      override fun estaLigado(): Boolean {
