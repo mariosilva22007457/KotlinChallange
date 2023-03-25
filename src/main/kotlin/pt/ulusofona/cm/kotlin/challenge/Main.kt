@@ -7,6 +7,9 @@ import java.util.*
 
 fun main() {
 
+    val carro = Carro("Mercedes", Motor(150,3000))
+    carro.moverPara(50,100)
+    println(carro)
 
 
 }

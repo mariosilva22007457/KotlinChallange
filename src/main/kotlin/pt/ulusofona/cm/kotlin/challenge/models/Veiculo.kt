@@ -7,7 +7,15 @@ import java.util.*
 abstract class Veiculo(open var identificador: String) : Movimentavel{
     var posicao = Posicao(0,0)
     abstract var dataDeAquisicao : Date
+
+
     abstract fun requerCarta():Boolean
+
+    override fun toString(): String {
+        return "$identificador | ${SimpleDateFormat("dd-MM-yyyy").format(dataDeAquisicao)} | Posicao | x:${posicao.x} | y:${posicao.y}"
+    }
+
+
 
 }
 
